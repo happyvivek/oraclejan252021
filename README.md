@@ -576,6 +576,16 @@ ashuxcv2   python demo.py   Up      0.0.0.0:1122->5000/tcp
  4414  docker-compose start
  4415  docker-compose logs  ashuapp1
  4416  docker-compose logs  ashuapp2
+ 
+ ```  
+ ## Create and use context to ACCESS REMOTE DOCKER ENGINE
+
+change from socket to TCP connection in docker config file
+docker context create remote_context ‐‐docker “host=tcp://<remote IP>:2375”
+docker context use remote_context
+docker ps(check the containers running on remote docker engine)   
+   
+ 
 
 ```
 ##  Java code 
